@@ -1,10 +1,22 @@
-notas = [7, 8, 6, 10, 5]
+def calcular_media(notas):
+    """
+    Calcula a média de uma lista de notas recebida.
+    Caso a lista esteja vazia, retorna 0.0 para evitar divisão por zero.
+    """
+    # Tratamento para lista de notas vazia
+    if not notas:
+        return 0.0
+    
+    soma_total = sum(notas)
+    quantidade_notas = len(notas)
+    media_calculada = soma_total / quantidade_notas
+    
+    return media_calculada
 
-s = 0
 
-for i in range(len(notas)):
-    s = s + notas[i]
+# Exemplo de uso
+notas_turma = [8.5, 7.0, 9.5, 6.0]
+media_final = calcular_media(notas_turma)
 
-media = s / len(notas)
-
-print("Média final:", media)
+# Exibição do resultado formatado com duas casas decimais
+print(f"A média da turma é: {media_final:.2f}")
