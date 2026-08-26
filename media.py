@@ -6,12 +6,11 @@ def calcular_media(notas):
     # Tratamento para lista de notas vazia
     if not notas:
         return 0.0
-    
+
     soma_total = sum(notas)
     quantidade_notas = len(notas)
-    media_calculada = soma_total / quantidade_notas
     
-    return media_calculada
+    return soma_total / quantidade_notas
 
 
 # Exemplo de uso
